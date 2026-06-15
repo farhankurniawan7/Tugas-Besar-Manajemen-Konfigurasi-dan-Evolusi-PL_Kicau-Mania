@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!--
+  Minimal, lenient Checkstyle configuration for the Continuous Inspection stage.
+  It flags genuinely problematic patterns (unused/star imports, empty statements,
+  missing braces) without enforcing strict formatting rules. failOnViolation is
+  set to false in pom.xml so this stage reports findings without breaking the build.
+-->
+<module name="Checker">
+    <property name="severity" value="warning"/>
+
+    <module name="TreeWalker">
+        <module name="UnusedImports"/>
+        <module name="RedundantImport"/>
+        <module name="AvoidStarImport"/>
+        <module name="EmptyStatement"/>
+        <module name="EqualsHashCode"/>
+        <module name="NeedBraces"/>
+        <module name="LeftCurly"/>
+        <module name="RightCurly"/>
+    </module>
+</module>
