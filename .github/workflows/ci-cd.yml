@@ -4,7 +4,7 @@
 #    1. continuous-integration  -> Continuous Integration   (Anggota 1)
 #    2. continuous-testing      -> Continuous Testing        (Anggota 2)
 #    3. continuous-inspection   -> Continuous Inspection     (Anggota 3)
-#    4. continuous-delivery     -> Continuous Delivery       (Anggota 4)
+#    4. continuous-delivery     -> Continuous Delivery       (Muhammad Daniel Anugrah Pratama)
 #    5. continuous-deployment   -> Continuous Deployment     (Anggota 5)
 # =============================================================================
 name: CI/CD Pipeline
@@ -118,7 +118,7 @@ jobs:
             target/checkstyle-result.xml
 
   # ===========================================================================
-  # KOMPONEN 4 - CONTINUOUS DELIVERY (Anggota 4)
+  # KOMPONEN 4 - CONTINUOUS DELIVERY (Muhammad Daniel Anugrah Pratama)
   # Package the application into a runnable JAR (the deployable artifact)
   # and publish it as a build artifact. Runs only after BOTH testing and
   # inspection pass -> the artifact is always "ready to deploy".
