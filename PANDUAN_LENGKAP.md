@@ -1,6 +1,6 @@
 # Panduan Lengkap CI/CD — dari 0 sampai Submit
 
-Repo: **https://github.com/jauharfz/simple-calculator-mkpl**
+Repo: **https://github.com/<USERNAME>/<REPO>** (ganti `<USERNAME>/<REPO>` dengan repo kelompok)
 
 Dokumen ini menjelaskan **apa yang sudah jadi**, **apa yang harus kalian lakukan
 manual** (rekam video + submit), dan **script demonstrasi** untuk tiap anggota.
@@ -23,8 +23,8 @@ manual** (rekam video + submit), dan **script demonstrasi** untuk tiap anggota.
 | Pipeline pertama → **semua hijau** | ✅ sukses |
 
 Cek sendiri:
-- Pipeline: https://github.com/jauharfz/simple-calculator-mkpl/actions
-- Release : https://github.com/jauharfz/simple-calculator-mkpl/releases
+- Pipeline: https://github.com/<USERNAME>/<REPO>/actions
+- Release : https://github.com/<USERNAME>/<REPO>/releases
 
 ---
 
@@ -55,7 +55,7 @@ Supaya PR tidak bisa di-merge kalau pipeline gagal (memperkuat poin "gate"):
 Lihat **bagian D** untuk script lengkap.
 
 ### B4. (WAJIB) Submit ke LMS
-- URL repository: `https://github.com/jauharfz/simple-calculator-mkpl`
+- URL repository: `https://github.com/<USERNAME>/<REPO>`
 - URL video demonstrasi (YouTube/dll).
 
 ---
@@ -63,20 +63,21 @@ Lihat **bagian D** untuk script lengkap.
 ## C. Demonstrasi Pull Request (untuk video)
 
 Pipeline berjalan pada **push** dan **pull request**. Untuk merekam alur PR
-(termasuk "kenapa PR lolos / gagal cek"), gunakan branch `develop` yang
-**sudah saya siapkan**.
+(termasuk "kenapa PR lolos / gagal cek"), buat satu branch baru dari `main`
+(misalnya `develop`), ubah sedikit, lalu buka Pull Request ke `main`.
 
 ### C1. Skenario PR LOLOS (happy path)
 ```bash
-git checkout develop
+git checkout main
 git pull
+git checkout -b develop          # branch demo, dibuat dari main
 
 # buat perubahan kecil yang valid, contoh tambah komentar atau method baru
 # (silakan edit src/main/java/com/example/Calculator.java sedikit)
 
 git add -A
 git commit -m "feat: tambah perubahan kecil untuk demo PR"
-git push
+git push -u origin develop
 ```
 Lalu buka PR `develop` → `main`:
 ```bash
@@ -90,12 +91,13 @@ Di tab **Pull requests**, tunjukkan:
   Release baru `v1.0.2` terbit otomatis.
 
 ### C2. Skenario PR GAGAL (untuk menjelaskan "kenapa gagal")
-Buat perubahan yang **sengaja merusak test**, contoh ubah `add` jadi `a - b`
-di `Calculator.java`, commit & push ke `develop`, buka PR. Tunjukkan:
+Di branch demo (mis. `develop`), buat perubahan yang **sengaja merusak test**,
+contoh ubah `add` jadi `a - b` di `Calculator.java`, commit & push, buka PR.
+Tunjukkan:
 - Job **Continuous Testing** jadi **merah** (test `testAdd` gagal).
 - Job berikutnya (Delivery) **tidak jalan** karena `needs:` gagal.
 - Tombol Merge diblokir (kalau branch protection aktif).
-- **Kembalikan** perubahan (revert) supaya `develop` bersih lagi.
+- **Kembalikan** perubahan (revert) supaya branch demo bersih lagi.
 
 > Tips: rekam skenario gagal dulu, lalu perbaiki, supaya video menunjukkan
 > pipeline "menangkap" bug — ini nilai plus.
