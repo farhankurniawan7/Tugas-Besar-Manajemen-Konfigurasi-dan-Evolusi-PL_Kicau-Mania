@@ -5,7 +5,7 @@
 #    2. continuous-testing      -> Continuous Testing        (Anggota 2)
 #    3. continuous-inspection   -> Continuous Inspection     (Anggota 3)
 #    4. continuous-delivery     -> Continuous Delivery       (Muhammad Daniel Anugrah Pratama)
-#    5. continuous-deployment   -> Continuous Deployment     (Anggota 5)
+#    5. continuous-deployment   -> Continuous Deployment     (Farhan Kurniawan)
 # =============================================================================
 name: CI/CD Pipeline
 
@@ -148,7 +148,7 @@ jobs:
           path: target/*.jar
 
   # ===========================================================================
-  # KOMPONEN 5 - CONTINUOUS DEPLOYMENT (Anggota 5)
+  # KOMPONEN 5 - CONTINUOUS DEPLOYMENT (Farhan Kurniawan)
   # Automatically publish the delivered JAR as a public GitHub Release.
   # Guard: only on a push to main (never on pull requests), so production
   # releases are created only for code that has been merged into main.
