@@ -22,7 +22,7 @@ yang menerapkan keempat komponen yang diminta pada tugas:
 | `continuous-testing`     | Continuous Testing     | **Anggota 2** |
 | `continuous-inspection`  | Continuous Inspection  | **Anggota 3** |
 | `continuous-delivery`    | Continuous Delivery    | **Muhammad Daniel Anugrah Pratama** |
-| `continuous-deployment`  | Continuous Deployment  | **Anggota 5** |
+| `continuous-deployment`  | Continuous Deployment  | **Farhan Kurniawan** |
 
 > Ganti "Anggota 1..5" dengan nama asli masing-masing sebelum submit / rekam video.
 
