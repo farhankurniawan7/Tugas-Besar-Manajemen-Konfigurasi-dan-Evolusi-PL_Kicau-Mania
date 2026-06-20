@@ -2,7 +2,7 @@
 #  CI/CD Pipeline - Simple Calculator
 #  Implements the 4 required components, split into 5 jobs (one per member):
 #    1. continuous-integration  -> Continuous Integration   (Anggota 1)
-#    2. continuous-testing      -> Continuous Testing        (Anggota 2)
+#    2. continuous-testing      -> Continuous Testing        (Ahmad Alfarizi)
 #    3. continuous-inspection   -> Continuous Inspection     (Anggota 3)
 #    4. continuous-delivery     -> Continuous Delivery       (Muhammad Daniel Anugrah Pratama)
 #    5. continuous-deployment   -> Continuous Deployment     (Farhan Kurniawan)
@@ -51,7 +51,7 @@ jobs:
         run: mvn -B clean compile
 
   # ===========================================================================
-  # KOMPONEN 2 - CONTINUOUS TESTING (Anggota 2)
+  # KOMPONEN 2 - CONTINUOUS TESTING (Ahmad Alfarizi)
   # Run all unit tests + generate a JaCoCo code-coverage report.
   # Runs only after Continuous Integration succeeds.
   # ===========================================================================

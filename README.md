@@ -19,7 +19,7 @@ yang menerapkan keempat komponen yang diminta pada tugas:
 | Job di pipeline (`.github/workflows/ci-cd.yml`) | Komponen | Anggota |
 |--------------------------------------------------|----------|---------|
 | `continuous-integration` | Continuous Integration | **Anggota 1** |
-| `continuous-testing`     | Continuous Testing     | **Anggota 2** |
+| `continuous-testing`     | Continuous Testing     | **Ahmad Al-Farizi** |
 | `continuous-inspection`  | Continuous Inspection  | **Anggota 3** |
 | `continuous-delivery`    | Continuous Delivery    | **Muhammad Daniel Anugrah Pratama** |
 | `continuous-deployment`  | Continuous Deployment  | **Farhan Kurniawan** |
