@@ -36,10 +36,13 @@ public class Calculator {
         if (exponent < 0) {
             throw new IllegalArgumentException("Exponent must not be negative");
         }
+
         long result = 1;
+
         for (int i = 0; i < exponent; i++) {
             result *= base;
         }
+
         return result;
     }
 }
